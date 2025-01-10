@@ -1,1 +1,23 @@
-<p>numbers-page works!</p>
+
+<p-panel header="Pipes números" class="p-1">
+  <p>
+    Pipes trabajar con números
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="uppercase">
+      {{ totalSells | number:'4.2-3'}}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="uppercase">
+      {{ totalSells | currency:'EUR'}}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="uppercase">
+      {{ percent | percent:'1.2-2'}}
+    </p-card>
+  </div>
