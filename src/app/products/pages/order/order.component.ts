@@ -13,6 +13,9 @@ export class OrderComponent implements OnInit{
 
   public isUpperCase: boolean = false;
 
+  public orderBy: keyof Hero | '' = '';
+
+
   public heroes: Hero [] = [
     {
     name: 'Superman',
@@ -60,6 +63,11 @@ export class OrderComponent implements OnInit{
   toggleUpperCase():void{
     this.isUpperCase = !this.isUpperCase;
   }
+
+  changeOrder ( value: keyof Hero ){
+    this.orderBy = value;
+  }
+
 
 
 }
